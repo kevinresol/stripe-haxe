@@ -1,0 +1,26 @@
+package stripe.types;
+
+typedef Card = {
+	id:String,
+	?address_city:String,
+	?address_country:String,
+	?address_line1:String,
+	?address_line1_check:String,
+	?address_line2:String,
+	?address_state:String,
+	address_zip:String,
+	address_zip_check:String,
+	brand:String,
+	country:String,
+	customer:String,
+	cvc_check:String,
+	?dynamic_last4:String,
+	exp_month:Int,
+	exp_year:Int,
+	fingerprint:String,
+	funding:String,
+	last4:String,
+	metadata:Metadata,
+	?name:String,
+	?tokenization_method:String,
+}

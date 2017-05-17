@@ -1,0 +1,5 @@
+-cp tests
+-main Playground
+-js bin/playground.js
+-lib stripe
+-lib hxnodejs
