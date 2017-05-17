@@ -13,7 +13,7 @@ typedef Card = {
 	brand:String,
 	country:String,
 	customer:String,
-	cvc_check:String,
+	?cvc_check:String,
 	?dynamic_last4:String,
 	exp_month:Int,
 	exp_year:Int,
