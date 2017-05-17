@@ -2,6 +2,7 @@ package;
 
 import tink.http.clients.*;
 import stripe.Stripe;
+import stripe.types.*;
 
 class Playground {
 	static function main() {
@@ -21,7 +22,7 @@ class Playground {
 					trace(data, '');
 				case Failure(err): 
 					trace(err);
-					trace(haxe.Json.parse(err.data));
+					trace(Error.parse(err.data));
 			});
 	}
 }

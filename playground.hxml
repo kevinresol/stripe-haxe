@@ -1,5 +1,7 @@
 -cp tests
 -main Playground
 -js bin/playground.js
+-dce full
+
 -lib stripe
 -lib hxnodejs

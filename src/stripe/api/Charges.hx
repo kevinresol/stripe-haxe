@@ -25,10 +25,5 @@ interface Charges {
 		?customer:String,
 		?source:String, // or a hash containing card info
 		?statement_descriptor:String,
-	}):ChargeResponse;
-}
-
-typedef ChargeResponse = {
-	>Response,
-	>Charge,
+	}):Charge;
 }

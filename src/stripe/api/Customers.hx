@@ -15,10 +15,5 @@ interface Customers {
 		// ?metadata:Metadata, // need support in tink_querystring
 		?shipping:Shipping,
 		?source:String, // or Card
-	}):CustomerResponse;
-}
-
-typedef CustomerResponse = {
-	>Response,
-	>Customer,
+	}):Customer;
 }

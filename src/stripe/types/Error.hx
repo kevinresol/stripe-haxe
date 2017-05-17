@@ -1,14 +1,25 @@
 package stripe.types;
 
 import tink.json.Value;
+using tink.CoreApi;
 
-typedef Error = {
-	type:ErrorType,
-	?charge:String,
-	?message:String,
-	?code:String,
-	?decline_code:String,
-	?param:Value,
+abstract Error(ErrorData) {
+	inline function new(v)
+		this = v;
+		
+	public static function parse(v:String)
+		return tink.Json.parse((v:ErrorData)).map(Error.new);
+}
+
+typedef ErrorData = {
+	error: {
+		type:ErrorType,
+		?charge:String,
+		?message:String,
+		?code:String,
+		?decline_code:String,
+		?param:Value,
+	}
 }
 
 @:enum
