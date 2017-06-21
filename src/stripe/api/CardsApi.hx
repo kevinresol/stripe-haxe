@@ -4,6 +4,9 @@ import stripe.types.*;
 
 interface CardsApi {
 	
+	@:sub('/$id')
+	function ofId(id:String):CardApi;
+	
 	@:post('/')
 	@:consumes('application/x-www-form-urlencoded')
 	public function create(body:{
