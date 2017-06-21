@@ -1,5 +1,6 @@
 package stripe;
 
+import stripe.api.*;
 import tink.http.Client;
 import tink.http.Response;
 import tink.http.Request;
@@ -9,7 +10,7 @@ import tink.url.Host;
 
 using tink.CoreApi;
 
-private typedef Impl = Remote<stripe.api.Stripe>;
+private typedef Impl = Remote<StripeApi>;
 
 @:forward
 abstract Stripe(Impl) {

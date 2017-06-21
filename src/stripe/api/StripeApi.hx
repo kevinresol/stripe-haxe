@@ -1,12 +1,12 @@
 package stripe.api;
 
-interface Stripe {
+interface StripeApi {
 	
 	@:sub('/v1/customers')
-	var customers:Customers;
+	var customers:CustomersApi;
 	
 	@:sub('/v1/charges')
-	var charges:Charges;
+	var charges:ChargesApi;
 	
 	
 }

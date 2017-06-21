@@ -2,11 +2,23 @@ package stripe.api;
 
 import stripe.types.*;
 
-interface Customers {
+interface CustomersApi {
+	
+	@:sub('/$id')
+	function ofId(id:String):CustomerApi;
+	
+	@:get('/')
+	@:consumes('application/x-www-form-urlencoded')
+	function list(query:{
+		?created:Date, // timestamp
+		?ending_before:String,
+		?starting_after:String,
+		?limit:Int,
+	}):List;
 	
 	@:post('/')
 	@:consumes('application/x-www-form-urlencoded')
-	public function create(body:{
+	function create(body:{
 		?account_balance:Int,
 		?business_vat_id:String,
 		?coupon:String,

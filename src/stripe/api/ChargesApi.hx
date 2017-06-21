@@ -1,9 +1,8 @@
 package stripe.api;
 
-
 import stripe.types.*;
 
-interface Charges {
+interface ChargesApi {
 	
 	@:post('/')
 	@:consumes('application/x-www-form-urlencoded')
