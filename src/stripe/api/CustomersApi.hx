@@ -10,7 +10,7 @@ interface CustomersApi {
 	@:get('/')
 	@:consumes('application/x-www-form-urlencoded')
 	function list(query:{
-		?created:Timestamp,
+		// ?created:Timestamp,
 		?ending_before:String,
 		?starting_after:String,
 		?limit:Int,
