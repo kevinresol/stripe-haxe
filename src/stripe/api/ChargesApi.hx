@@ -4,6 +4,9 @@ import stripe.types.*;
 
 interface ChargesApi {
 	
+	@:sub('/$id')
+	function ofId(id:String):ChargeApi;
+	
 	@:post('/')
 	@:consumes('application/x-www-form-urlencoded')
 	public function create(body:{
