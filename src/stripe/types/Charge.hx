@@ -4,7 +4,7 @@ import tink.json.Value;
 
 typedef Charge = {
 	id:String,
-	object:String,
+	// object:String,
 	amount:Int,
 	amount_refunded:Int,
 	?application:String,
@@ -12,7 +12,7 @@ typedef Charge = {
 	balance_transaction:String,
 	captured:Bool,
 	created:Timestamp,
-	currency:String,
+	currency:Currency,
 	customer:String,
 	?description:String,
 	?destination:String,

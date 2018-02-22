@@ -2,8 +2,8 @@ package stripe.api;
 
 import stripe.types.*;
 
-interface ChargeApi {
+interface RefundApi {
 	
 	@:get('/')
-	public function get():Charge;
+	public function get():Refund;
 }
